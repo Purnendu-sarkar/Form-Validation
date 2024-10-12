@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <title>Form Validation in JavaScript</title>
+    <style>
+        .fade-in {
+            transition: opacity 0.5s ease-in-out;
+        }
+        .fade-out {
+            transition: opacity 0.5s ease-in-out;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="bg-cover bg-no-repeat" style="background-image: url('wave-haikei.png');">
+    <div class="flex items-center justify-center h-screen">
+        <div class="bg-white rounded-lg shadow-lg p-8 w-96">
+            <h1 class="text-2xl font-bold text-center mb-6">Signup</h1>
+            <form id="signupForm">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Full Name</label>
+                    <input type="text" placeholder="Type Name Here" id="name" class="mt-1 block w-full border border-gray-300 rounded-md p-2 transition duration-300 focus:outline-none focus:ring focus:ring-blue-300" />
+                    <span id="nameError" class="text-red-500 text-sm fade-in"></span>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700">Email</label>
+                    <input type="email" placeholder="xyz@gmail.com" id="email" class="mt-1 block w-full border border-gray-300 rounded-md p-2 transition duration-300 focus:outline-none focus:ring focus:ring-blue-300" />
+                    <span id="emailError" class="text-red-500 text-sm fade-in"></span>
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gray-700">Password</label>
+                    <input type="password" placeholder="at least 8 characters" id="password" class="mt-1 block w-full border border-gray-300 rounded-md p-2 transition duration-300 focus:outline-none focus:ring focus:ring-blue-300" />
+                    <span id="passError" class="text-red-500 text-sm fade-in"></span>
+                </div>
+                <div class="mb-4">
+                    <input type="submit" value="Create Account" id="submitBtn" class="w-full bg-blue-500 text-white font-semibold py-2 rounded-md cursor-pointer hover:bg-blue-600" />
+                </div>
+            </form>
+            <p class="text-center text-gray-700">Already have an account? <a href="#" class="text-blue-500 hover:underline">Login</a></p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
